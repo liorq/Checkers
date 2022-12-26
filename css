@@ -1,0 +1,183 @@
+
+
+.board{
+    padding: 5px;
+    margin: 20px auto;
+    width: 730px;
+    height: 730px;
+    outline: 15px solid  #472a17d7;
+    border-image-source: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfpj1EWtq9q-xUSCzAzsNKU-4OG52wYZkGgPxTr6w4&s");
+    border-image-slice: 20;
+    display: flex;
+    flex-wrap:wrap-reverse ;
+    align-content: flex-start;
+  
+  }
+  .box{
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+  }
+  *{
+    color: white;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: sans-serif;
+    background-image: url("https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") ;
+    background-size: cover;
+  
+  }
+  .brown,.shament{
+    -webkit-box-shadow: inset 2px 0px 23px 9px rgba(0,0,0,0.68); 
+    box-shadow: inset 2px 0px 23px 9px rgba(0,0,0,0.68);
+  }
+  .brown{
+    background: #9c6644;
+  }
+  .shament{
+  background: #ecf39e;
+  }
+  .piece {
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+    left: 3px;
+  }
+  .king{
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+    left: 3px;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  filter: drop-shadow(0 0 0.75rem rgb(10, 224, 92));
+  }
+  .king:focus,.piece:focus{
+    border:2px solid rgba(0, 255, 26, 0.741);
+    animation: myAnim 2s cubic-bezier(0.16, 1, 0.3, 1) 0s 1 alternate backwards;
+  }
+  .black{
+      background-image: url("https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background-size: initial;
+  
+  }
+  .white{
+    background-image: url("https://images.pexels.com/photos/131639/pexels-photo-131639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+  
+  }
+  .none{
+    opacity: 0;
+  
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+  }
+  #turn{
+    
+    position: absolute;
+    top: 80px;
+    color: white;
+    text-shadow: 2px 3px 5px red;
+    background-size: initial;
+  
+  }
+  .green{
+    background: green;
+    animation: blinker 1s linear infinite ;
+  
+  }
+  .burn{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiRG3py9h8LQXW67q-kMmx8Trb5g2mH84kH3mDNcX1xThLu68bDFg9iRcrUXsYgp-ZGQo&usqp=CAU");
+    animation: blinker 1s linear infinite ;
+  }
+  .container-dialog1{
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  display: flex;
+  justify-content: left;
+  
+  }
+  #favDialog{
+    height:100px;
+    width: 200px;
+    text-align: center;
+  
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+  
+  #updateDetails,#updateDetails1 {
+    box-shadow:inset 0px 0px 0px 1px #a6827e;
+    background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+    background-color:#7d5d3b;
+    border-radius:8px;
+    border:1px solid #140c05;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:8px 27px;
+    margin-left: 5px;
+    background-image: none;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #4d3534;
+  }
+  #updateDetails:hover,#updateDetails1:hover {
+    background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+    background-color:#634b30;
+  }
+  #updateDetails:active,#updateDetails1:active
+   {
+    position:relative;
+    top:1px;
+  }
+  #no_btn,#yes_btn,#rest_btn{
+    border:1px solid #ecf39e;
+    margin-left: 5px;
+    padding: 5px;
+  }
+  @keyframes myAnim {
+    0% {
+      animation-timing-function: ease-out;
+      transform: scale(1);
+      transform-origin: center center;
+    }
+  
+    10% {
+      animation-timing-function: ease-in;
+      transform: scale(0.91);
+    }
+  
+    17% {
+      animation-timing-function: ease-out;
+      transform: scale(0.98);
+    }
+  
+    33% {
+      animation-timing-function: ease-in;
+      transform: scale(0.87);
+    }
+  
+    45% {
+      animation-timing-function: ease-out;
+      transform: scale(1);
+    }
+  }      
+  
+  
